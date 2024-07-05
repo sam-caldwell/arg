@@ -14,9 +14,7 @@ const (
 	NotExists ExistsOrNot = false
 )
 
-// Filename - get a filename from the command-line and verify if it exists if requireExists is true
-//
-//	(c) 2023 Sam Caldwell.  MIT License
+// Filename - get a filename from the command-line and verify if it exists, if requireExists is true
 func Filename(name, defaultValue, usage string, requireExists ExistsOrNot) (*string, error) {
 	value := flag.String(name, defaultValue, usage)
 	if bool(requireExists) && !file.Exists(*value) {
