@@ -7,12 +7,13 @@ import (
 )
 
 // Choices - Get a string from command-line and verify it is one of a set of choices
-func Choices(name, defaultTemplate, usage string, choices ...string) (*string, error) {
-	value := flag.String(name, defaultTemplate, usage)
+func Choices(name, defaultValue, usage string, choices ...string) (*string, error) {
+	value := flag.String(name, defaultValue, usage)
+	flag.Parse()
 	for _, validValue := range choices {
-		if *value != validValue {
-			return nil, fmt.Errorf(errors.InvalidInput+errors.Details, name)
+		if *value == validValue {
+			return value, nil
 		}
 	}
-	return value, nil
+	return value, fmt.Errorf(errors.InvalidInput+errors.Details, *value)
 }
