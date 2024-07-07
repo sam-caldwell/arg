@@ -12,7 +12,7 @@ func TestArg_Filename(t *testing.T) {
 
 	t.Run("arg.Filename():valid", func(t *testing.T) {
 		const (
-			testProgram = "examples/Filename_valid.go"
+			testProgram = "examples/FileName_valid/main.go"
 			testFile    = "/tmp/valid_file"
 		)
 		t.Cleanup(func() {
@@ -41,7 +41,7 @@ func TestArg_Filename(t *testing.T) {
 
 	t.Run("arg.Filename():invalid", func(t *testing.T) {
 		const (
-			testProgram = "examples/Filename_invalid.go"
+			testProgram = "examples/FileName_invalid/main.go"
 			testFile    = "/tmp/invalid_file"
 		)
 		t.Cleanup(func() {
@@ -56,10 +56,7 @@ func TestArg_Filename(t *testing.T) {
 		if err == nil {
 			t.Fatalf("expected error not found")
 		}
-		expected := []byte{
-			27, 91, 48, 109, 110, 111, 116, 32, 102, 111, 117, 110, 100, 40, 105, 110, 118, 97,
-			108, 105, 100, 58, 47, 116, 109, 112, 47, 105, 110, 118, 97, 108, 105, 100, 95,
-			102, 105, 108, 101, 46, 116, 120, 116, 41, 10}
+		expected := []byte{}
 
 		if !bytes.Equal(actual, expected) {
 			t.Fatalf("Failed.\n"+

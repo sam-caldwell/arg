@@ -8,7 +8,7 @@ import (
 
 func TestArg_String(t *testing.T) {
 	const cmd = "go"
-	const testProgram = "examples/String.go"
+	const testProgram = "examples/String/main.go"
 
 	t.Run("arg.String() false", func(t *testing.T) {
 		args := []string{"run", testProgram}

@@ -8,7 +8,7 @@ import (
 
 func TestArg_Bool(t *testing.T) {
 	const cmd = "go"
-	const testProgram = "examples/bool.go"
+	const testProgram = "examples/Bool/main.go"
 
 	t.Run("arg.Bool() false", func(t *testing.T) {
 		args := []string{"run", testProgram}

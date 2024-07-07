@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestArg_Uint(t *testing.T) {
+func TestArg_Int(t *testing.T) {
 	const cmd = "go"
 	const testProgram = "examples/Uint/main.go"
 

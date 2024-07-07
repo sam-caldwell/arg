@@ -8,7 +8,7 @@ import (
 
 func TestArg_Uint64(t *testing.T) {
 	const cmd = "go"
-	const testProgram = "examples/Uint64.go"
+	const testProgram = "examples/Uint64/main.go"
 
 	t.Run("arg.Uint64() false", func(t *testing.T) {
 		args := []string{"run", testProgram}
