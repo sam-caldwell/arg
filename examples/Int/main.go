@@ -17,5 +17,5 @@ func main() {
 	if err = value.Verify(); err != nil {
 		fmt.Println(err.Error())
 	}
-	fmt.Printf("value:%v\n", *value)
+	fmt.Printf("value:%v\n", *value.Value())
 }

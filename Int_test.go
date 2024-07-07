@@ -17,9 +17,8 @@ func TestArg_Int(t *testing.T) {
 			t.Fatalf("Failed to run test program: %v", err)
 		}
 		expected := []byte{
-			27, 91, 48, 109, 118, 97, 108, 117, 101, 58,
-			123, 48, 120, 99, 48, 48, 48, 48, 49, 52, 54,
-			100, 56, 32, 45, 53, 32, 49, 48, 125, 10}
+			27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 48, 10,
+		}
 		if !bytes.Equal(actual, expected) {
 			t.Fatalf("Failed (mismatch)\n"+
 				"     got: '%s' (%v)\n"+
