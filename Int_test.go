@@ -21,9 +21,10 @@ func TestArg_Int(t *testing.T) {
 			123, 48, 120, 99, 48, 48, 48, 48, 49, 52, 54,
 			100, 56, 32, 45, 53, 32, 49, 48, 125, 10}
 		if !bytes.Equal(actual, expected) {
-			t.Fatalf("Failed\n"+
-				"     got: '%v'\n"+
-				"expected: '%v'\n", actual, expected)
+			t.Fatalf("Failed (mismatch)\n"+
+				"     got: '%s' (%v)\n"+
+				"expected: '%s' (%v)\n",
+				string(actual), actual, string(expected), expected)
 		}
 	})
 
