@@ -16,7 +16,7 @@ func TestArg_Choices(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Failed to run test program: %v", err)
 		}
-		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 97, 10}
+		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 97}
 		if !bytes.Equal(actual, expected) {
 			t.Fatalf("exit code should return no output.\n"+
 				"     got: '%v'\n"+
@@ -30,7 +30,7 @@ func TestArg_Choices(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Failed to run test program: %v", err)
 		}
-		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 98, 10}
+		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 98}
 		if !bytes.Equal(actual, expected) {
 			t.Fatalf("exit code should return no output.\n"+
 				"     got: '%v'\n"+
@@ -44,7 +44,7 @@ func TestArg_Choices(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Failed to run test program: %v", err)
 		}
-		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 99, 10}
+		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 99}
 		if !bytes.Equal(actual, expected) {
 			t.Fatalf("exit code should return no output.\n"+
 				"     got: '%v'\n"+
@@ -58,7 +58,7 @@ func TestArg_Choices(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Failed to run test program: %v", err)
 		}
-		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 100, 10}
+		expected := []byte{27, 91, 48, 109, 118, 97, 108, 117, 101, 58, 100}
 		if !bytes.Equal(actual, expected) {
 			t.Fatalf("Failed.\n"+
 				"     got: '%v'\n"+
@@ -73,8 +73,8 @@ func TestArg_Choices(t *testing.T) {
 			t.Fatalf("expected error")
 		}
 		expected := []byte{
-			27, 91, 48, 109, 105, 110, 118, 97, 108, 105,
-			100, 32, 105, 110, 112, 117, 116, 40, 101, 41, 10}
+			27, 91, 48, 109, 105, 110, 118, 97, 108,
+			105, 100, 32, 105, 110, 112, 117, 116, 10}
 		if !bytes.Equal(actual, expected) {
 			t.Fatalf("Failed.\n"+
 				"     got: '%v'\n"+
